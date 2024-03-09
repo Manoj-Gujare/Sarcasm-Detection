@@ -61,4 +61,4 @@ A Streamlit web application is created to allow users to input sentences and pre
 To use the trained model for sarcasm detection:
 1. Call the `predict_sarcasm()` function with a text input.
 2. The function will return whether the text is sarcastic or not.
-3. Alternatively, run the Streamlit web application using `streamlit run <filename.py>`, where `<filename.py>` is the name of the Python script containing the Streamlit code.
+3. Alternatively, run the Streamlit web application using `streamlit run <App.py>`, where `<App.py>` is the name of the Python script containing the Streamlit code.
