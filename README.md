@@ -10,6 +10,7 @@ This project involves building a model to detect sarcasm in textual data using L
 - TensorFlow (Version 2.x)
 - Matplotlib
 - NLTK
+- Streamlit
 
 ## Get the Data
 The dataset is obtained from two JSON files, `Sarcasm_Headlines_Dataset.json` and `Sarcasm_Headlines_Dataset_v2.json`. Both files are read using the Pandas library, and then concatenated to form the complete dataset.
@@ -32,7 +33,7 @@ A word cloud is generated to visualize the most occurring words in the sarcastic
 The dataset is split into training and testing sets. The headlines are tokenized and padded to ensure uniform length sequences.
 
 ## Load GloVe Model
-A pre-trained GloVe (Global Vectors for Word Representation) model is loaded to obtain word embeddings.
+A pre-trained GloVe (Global Vectors for Word Representation) model is loaded to obtain word embeddings.<br>
 Required GloVe model file - https://drive.google.com/file/d/12Utwrbl-z2GmsGXf3_i-BRyNRo-SD9MN/view?usp=sharing
 
 ## Build the Embedding Layer
@@ -53,7 +54,11 @@ A function `predict_sarcasm()` is defined to predict whether a given text is sar
 ## Model Persistence
 The trained LSTM model is saved using the `pickle` library and stored in the file `sarcasm_detection.pkl` for future use.
 
+## Streamlit Web Application
+A Streamlit web application is created to allow users to input sentences and predict sarcasm using the trained model. The application provides an interactive interface for users to perform sarcasm detection on their text data.
+
 ## Usage
 To use the trained model for sarcasm detection:
 1. Call the `predict_sarcasm()` function with a text input.
 2. The function will return whether the text is sarcastic or not.
+3. Alternatively, run the Streamlit web application using `streamlit run <filename.py>`, where `<filename.py>` is the name of the Python script containing the Streamlit code.
